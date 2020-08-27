@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
+### TMUX AUTOMATIC LAUNCH ###
 if [ -z "$TMUX" ] ; then
 
 	TERMINAL_EMULATOR="$(basename $(tty))"
@@ -26,6 +28,8 @@ if [ -z "$TMUX" ] ; then
 		fi
 	done
 fi
+###############
+
 
 if [ -f ~/.bash_aliases ] ; then
 	source ~/.bash_aliases
