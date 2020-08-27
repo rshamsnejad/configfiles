@@ -4,6 +4,8 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
+
 
 if [ -f ~/.bash_aliases ] ; then
 	source ~/.bash_aliases
