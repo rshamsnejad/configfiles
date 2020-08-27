@@ -10,10 +10,13 @@
 if [ -z "$TMUX" ] ; then
 
 	TERMINAL_EMULATOR="$(basename $(tty))"
+	TERMINAL_EMULATOR=${TERMINAL_EMULATOR^^} # Uppercase all letters
+
 	TERMINAL_PROCESS="$(ps -o 'cmd=' -p $(ps -o 'ppid=' -p $$))"
 
 	if [ -x "$TERMINAL_PROCESS" ] ; then
 		TERMINAL_EMULATOR=$(basename "$TERMINAL_PROCESS")
+		TERMINAL_EMULATOR=${TERMINAL_EMULATOR^} # Uppercase first letter
 	fi
 
 	for i in $(seq -w 1 100) ; do
