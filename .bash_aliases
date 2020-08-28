@@ -3,6 +3,9 @@
 # Trick for aliases to work with sudo
 alias sudo='sudo '
 
+alias please='sudo '
+alias fucking='sudo '
+
 alias ls='ls --color=auto'
 alias ll='ls -lH'
 alias la='ll -a'
