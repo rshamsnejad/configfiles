@@ -38,4 +38,8 @@ if [ -f ~/.bash_aliases ] ; then
 	source ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_wsl2 ] ; then
+	source ~/.bash_wsl2
+fi
+
 export PS1="\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;12m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] : \[$(tput sgr0)\]\[\033[38;5;159m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;9m\][\t]\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] {\$?} \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;9m\]\\$ \[$(tput sgr0)\]"
