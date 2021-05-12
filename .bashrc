@@ -5,9 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-
 ### TMUX AUTOMATIC LAUNCH ###
-if [ -z "$TMUX" ] ; then
+if [ -z "$TMUX" -a "$TERM_PROGRAM" != "vscode" ] ; then
 
 	TERMINAL_EMULATOR="$(basename $(tty))"
 	TERMINAL_EMULATOR=${TERMINAL_EMULATOR^^} # Uppercase all letters
