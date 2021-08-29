@@ -1,6 +1,6 @@
 function fish_greeting
     echo "
- 0                             .
+ O                             .
                              .` `.
      O                     .`     `.
                      _....:._       .                        .
