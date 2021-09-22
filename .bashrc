@@ -16,6 +16,8 @@ if [ -z "$TMUX" -a "$TERM_PROGRAM" != "vscode" ] ; then
 	if [ -x "$TERMINAL_PROCESS" ] ; then
 		TERMINAL_EMULATOR=$(basename "$TERMINAL_PROCESS")
 		TERMINAL_EMULATOR=${TERMINAL_EMULATOR^} # Uppercase first letter
+	elif [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+		TERMINAL_EMULATOR="SSH"
 	fi
 
 	for i in $(seq -w 1 100) ; do
