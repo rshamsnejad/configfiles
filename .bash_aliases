@@ -14,6 +14,10 @@ alias cp='cp -v'
 alias rm='rm -v'
 alias mv='mv -v'
 
+alias kde-logout='qdbus org.kde.Shutdown /Shutdown logout'
+alias kde-reboot='qdbus org.kde.Shutdown /Shutdown logoutAndReboot'
+alias kde-shutdown='qdbus org.kde.Shutdown /Shutdown logoutAndShutdown'
+
 
 
 alias Accio='yay -S'
