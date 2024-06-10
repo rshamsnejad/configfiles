@@ -20,17 +20,7 @@ if [ -z "$TMUX" -a "$TERM_PROGRAM" != "vscode" ] ; then
 		TERMINAL_EMULATOR="SSH"
 	fi
 
-	for i in $(seq -w 1 100) ; do
-		if [ "$i" -eq 001 ] ; then
-			SESSION_NAME="$TERMINAL_EMULATOR"
-		else
-			SESSION_NAME="$TERMINAL_EMULATOR-$i"
-		fi
-
-		if (exec tmux new -s "$SESSION_NAME") ; then
-			break
-		fi
-	done
+	tmux new-session -A -s $TERMINAL_EMULATOR
 fi
 ###############
 
