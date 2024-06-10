@@ -10,6 +10,8 @@ alias ls='ls --color=auto'
 alias ll='ls -lH'
 alias la='ll -a'
 
+alias grep='grep --color=auto'
+
 alias cp='cp -v'
 alias rm='rm -v'
 alias mv='mv -v'
