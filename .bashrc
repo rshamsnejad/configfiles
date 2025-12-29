@@ -20,7 +20,7 @@ if [ -z "$TMUX" -a "$TERM_PROGRAM" != "vscode" ] ; then
 		TERMINAL_EMULATOR="SSH"
 	fi
 
-	tmux new-session -A -s $TERMINAL_EMULATOR
+	#tmux new-session -A -s $TERMINAL_EMULATOR
 fi
 ###############
 
