@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-DOTFILES_DIR="$SCRIPT_DIR/../.."
+DOTFILES_DIR="$SCRIPT_DIR/../../dotfiles"
 
 cp -vi "$DOTFILES_DIR"/.bashrc ~
 cp -vi "$DOTFILES_DIR"/.bash_aliases ~
